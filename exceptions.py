@@ -1,0 +1,2 @@
+class VideoTooBigError(Exception):
+    pass
