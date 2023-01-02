@@ -16,4 +16,4 @@ def download(url):
     }
     
     
-    return filename, info
+    return filename, streamlined_info
