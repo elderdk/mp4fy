@@ -4,7 +4,7 @@ from boto3_handler import upload
 
 def handler(event, context):
     print(event)
-    filename, info = download(event['body'])
+    filename, info = download(event['queryStringParameters']['url'])
     
     signed_url = upload(filename)
     
