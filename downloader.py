@@ -10,5 +10,10 @@ def download(url):
 
     with YoutubeDL(options) as ydl:
         ydl.download(url)
-        
+    
+    streamlined_info = {
+        "title": info['title']
+    }
+    
+    
     return filename, info
