@@ -47,6 +47,11 @@ Resources:
             Method: post
       Layers:
         - arn:aws:lambda:ap-northeast-2:477137266285:layer:ytdlp-layer:1
+      Timeout: 900
+      Environment:
+        Variables:
+          bucketname: mp4fy-storage
+          expiration: 3600
   LambdaExecutionRole:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
