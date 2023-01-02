@@ -24,7 +24,7 @@ Globals:
       Role: !Ref CodeDeployRole
 
 Resources:
-  MP4FY-LAMBDA:
+  MP4FYLAMBDA:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-MP3FY-LAMBDA'
