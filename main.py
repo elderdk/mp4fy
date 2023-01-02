@@ -3,7 +3,7 @@ from downloader import download
 from boto3_handler import upload
 
 def handler(event, context):
-
+    print(event)
     filename, info = download(event['body'])
     
     signed_url = upload(filename)
