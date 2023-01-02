@@ -27,7 +27,7 @@ Resources:
   MP4FYLAMBDA:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-MP3FY-LAMBDA'
+      FunctionName: 'mp4fy-lambda'
       Handler: main.handler
       Runtime: python3.7
       Role:
