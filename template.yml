@@ -24,10 +24,10 @@ Globals:
       Role: !Ref CodeDeployRole
 
 Resources:
-  HelloWorld:
+  MP4FY-LAMBDA:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-HelloWorld'
+      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-MP3FY-LAMBDA'
       Handler: main.handler
       Runtime: python3.7
       Role:
@@ -45,6 +45,8 @@ Resources:
           Properties:
             Path: /
             Method: post
+      Layers:
+        - arn:aws:lambda:ap-northeast-2:477137266285:layer:ytdlp-layer:1
   LambdaExecutionRole:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
