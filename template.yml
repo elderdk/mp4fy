@@ -45,6 +45,8 @@ Resources:
           Properties:
             Path: /
             Method: post
+      Layers:
+        - arn:aws:lambda:ap-northeast-2:477137266285:layer:ytdlp-layer:1
   LambdaExecutionRole:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
