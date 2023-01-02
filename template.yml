@@ -34,6 +34,9 @@ Resources:
         Fn::GetAtt:
         - LambdaExecutionRole
         - Arn
+      MemorySize: 1024
+      EphemeralStorage:
+        Size: 1024
       Events:
         GetEvent:
           Type: Api
