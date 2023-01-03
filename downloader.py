@@ -1,7 +1,8 @@
 from yt_dlp import YoutubeDL
 from option_generator import get_option
 from exceptions import VideoTooBigError
-import humanize
+from tools import human_size
+
 
 def download(url):
 
@@ -11,7 +12,7 @@ def download(url):
 
     video_size = info['filesize_approx']
     if  video_size > 1024000000:
-        raise VideoTooBigError(f"Sorry! The video is too big! ({humanize.naturalsize(video_size)})")
+        raise VideoTooBigError(f"Sorry! The video is too big! ({human_size(video_size)})")
 
     with YoutubeDL(options) as ydl:
         ydl.download(url)
