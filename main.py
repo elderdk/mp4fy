@@ -20,6 +20,9 @@ def handler(event, context):
     except VideoTooBigError as e:
         return {"statusCode": 200, "body": json.dumps({"error": f"{e}"})}
 
+    except Exception as e:
+        return {"statusCode": 200, "body": json.dumps({"error": f"{e}"})}
+
 
 if __name__ == "__main__":
     url = "https://youtu.be/6O3MzPeomqs"
