@@ -30,6 +30,6 @@ def handler(event, context):
 
 if __name__ == "__main__":
     url = "https://www.youtube.com/watch?v=mgQqKeiL9c8"
-    long_video_url = "https://www.youtube.com/watch?v=BcbmFxbdsJ0&ab_channel=%EB%AA%BD%ED%82%A4%EB%B9%84%EC%A7%80%EC%97%A0MONKEYBGM"
-    result = handler({"queryStringParameters": {'url': url}}, {})
+    long_video_url = "https://www.youtube.com/watch?v=L_LUpnjgPso&ab_channel=Fireplace10hours"
+    result = handler({"queryStringParameters": {'url': long_video_url}}, {})
     print(result)
