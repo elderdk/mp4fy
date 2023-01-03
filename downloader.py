@@ -23,6 +23,8 @@ def download(url):
         "title": info["title"],
         "thumbnail": info["thumbnail"],
         "original_url": info["original_url"],
+        "description": info["description"][:100],
+        "duration_string": info["duration_string"]
     }
 
     return filename, streamlined_info
