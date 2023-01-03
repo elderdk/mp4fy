@@ -5,19 +5,21 @@ from exceptions import VideoTooBigError
 
 def download(url):
 
-    with YoutubeDL() as ydl:
+    with YoutubeDL({"format": "mp4"}) as ydl:
         info = ydl.extract_info(url, download=False)
         filename, options = get_option(info)
 
-
-    if info['filesize_approx'] > 1024000000:
-        raise VideoTooBigError("Sorry! The video is too big!")
+    video_size = info['filesize_approx']
+    if  video_size > 1024000000:
+        raise VideoTooBigError(f"Sorry! The video is too big! ({str(video_size)})")
 
     with YoutubeDL(options) as ydl:
         ydl.download(url)
     
     streamlined_info = {
-        "title": info['title']
+        "title": info['title'],
+        "thumbnail": info['thumbnail'],
+        "original_url": info['original_url']
     }
     
     
