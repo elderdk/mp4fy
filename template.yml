@@ -49,7 +49,7 @@ Resources:
             Path: /
             Method: post
       Layers:
-        - arn:aws:lambda:ap-northeast-2:477137266285:layer:ytdlp-layer:1
+        - arn:aws:lambda:ap-northeast-2:477137266285:layer:ytdlp-layer:3
       Timeout: 900
       Environment:
         Variables:
